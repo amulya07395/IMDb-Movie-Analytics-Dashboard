@@ -4,14 +4,7 @@ import pandas as pd
 # Page title
 st.title("IMDb Movie Analytics Dashboard")
 
-# Load dataset
-from pathlib import Path
-
-BASE_DIR = Path(__file__).resolve().parent
-
-df = pd.read_csv(
-    BASE_DIR / "Top 250 movies on imdb in 2026.csv"
-)
+df=pd.read_csv("ToP 250 movies on imdb in 2026.csv")
 
 # Display first 10 records
 st.header("Dataset Preview")
