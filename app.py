@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 
@@ -6,7 +5,13 @@ import pandas as pd
 st.title("IMDb Movie Analytics Dashboard")
 
 # Load dataset
-df = pd.read_csv("Top 250 movies on imdb in 2026.csv")
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+
+df = pd.read_csv(
+    BASE_DIR / "Top 250 movies on imdb in 2026.csv"
+)
 
 # Display first 10 records
 st.header("Dataset Preview")
